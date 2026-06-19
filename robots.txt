@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://larrizwinton86.github.io/portalzh-hth-com-cn-2/sitemap.xml
