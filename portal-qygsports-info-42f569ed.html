@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5">
+  <title>奇异果体育 · 专题介绍</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f2f4f7;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', sans-serif;
+      line-height: 1.6;
+      color: #2c3e50;
+      padding: 2rem 1.2rem;
+    }
+
+    .page {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    /* hero 横幅 —— 杂志式开篇 */
+    .hero {
+      background: linear-gradient(145deg, #ffffff 0%, #f9fafc 100%);
+      border-radius: 28px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04), 0 2px 4px rgba(0, 0, 0, 0.02);
+      padding: 3.2rem 2.8rem;
+      margin-bottom: 2.8rem;
+      border: 1px solid #e4e8ee;
+      position: relative;
+      transition: all 0.2s ease;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 6px;
+      height: 100%;
+      background: linear-gradient(180deg, #9ab4d4, #6f8db0);
+      border-radius: 28px 0 0 28px;
+    }
+
+    .hero h1 {
+      font-size: 2.4rem;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      color: #1f2a3a;
+      margin-bottom: 0.7rem;
+      line-height: 1.2;
+    }
+
+    .hero h1 span {
+      font-weight: 620;
+      color: #3a5f7a;
+    }
+
+    .hero .sub {
+      font-size: 1.1rem;
+      color: #4b5e72;
+      max-width: 680px;
+      border-left: 3px solid #b4c7db;
+      padding-left: 1.2rem;
+      margin-top: 0.4rem;
+    }
+
+    /* 卡片网格 */
+    .card-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 1.8rem;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 22px;
+      padding: 1.8rem 2.2rem;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03), 0 6px 18px rgba(0, 0, 0, 0.02);
+      border: 1px solid #e0e5ec;
+      transition: box-shadow 0.2s, transform 0.15s;
+    }
+
+    .card:hover {
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.04), 0 4px 12px rgba(0, 0, 0, 0.02);
+      transform: translateY(-2px);
+    }
+
+    .card h2 {
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: #1f2a3a;
+      margin-bottom: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .card h2 .accent-line {
+      display: inline-block;
+      width: 4px;
+      height: 1.4rem;
+      background: #8aa9c4;
+      border-radius: 4px;
+      margin-right: 0.4rem;
+    }
+
+    .card p {
+      margin-bottom: 0.9rem;
+      font-size: 1.02rem;
+      color: #2f4052;
+    }
+
+    .card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .stat-highlight {
+      background: #f6f9fd;
+      border-radius: 16px;
+      padding: 0.6rem 1rem 0.6rem 1.2rem;
+      margin: 1rem 0 0.2rem;
+      border-left: 4px solid #8aa9c4;
+      display: inline-block;
+      font-size: 0.96rem;
+      color: #1d2a38;
+    }
+
+    /* 页尾提示 */
+    .footer-note {
+      margin-top: 2.8rem;
+      padding: 1.6rem 2.2rem;
+      background: #eef1f6;
+      border-radius: 28px;
+      border: 1px solid #d7dee8;
+      text-align: center;
+      font-size: 1rem;
+      color: #364656;
+      box-shadow: inset 0 1px 3px rgba(255,255,255,0.8);
+    }
+
+    .footer-note a {
+      color: #2a4d6e;
+      text-decoration: none;
+      font-weight: 460;
+      border-bottom: 1px dashed #93aec9;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .footer-note a:hover {
+      color: #0f2b44;
+      border-bottom: 1px solid #2a4d6e;
+    }
+
+    .tag-mini {
+      display: inline-block;
+      background: #dfe6ef;
+      color: #213246;
+      font-size: 0.78rem;
+      padding: 0.2rem 0.8rem;
+      border-radius: 30px;
+      letter-spacing: 0.02em;
+      margin-right: 0.5rem;
+    }
+
+    /* 响应式 */
+    @media (max-width: 640px) {
+      body {
+        padding: 1.2rem 0.8rem;
+      }
+      .hero {
+        padding: 2rem 1.4rem;
+      }
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+      .card {
+        padding: 1.4rem 1.2rem;
+      }
+      .card h2 {
+        font-size: 1.2rem;
+      }
+      .footer-note {
+        padding: 1.2rem 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- 杂志式 hero 横幅 + 背景说明 -->
+  <div class="hero">
+    <h1>专题 · <span>奇异果体育</span></h1>
+    <div class="sub">
+      一个持续迭代的赛事与运动内容平台，聚合多元竞技资讯与社区视角。本文从入口稳定性和页面架构切入，梳理其设计逻辑与使用脉络。
+    </div>
+    <div style="margin-top: 1.4rem; display: flex; flex-wrap: wrap; gap: 0.6rem 1rem;">
+      <span class="tag-mini">📋 知识型解读</span>
+      <span class="tag-mini">⚙️ 结构说明</span>
+      <span class="tag-mini">🌐 入口参考</span>
+    </div>
+  </div>
+
+  <!-- 三段自然介绍 & 特点 / 场景 / FAQ摘要 (卡片形式) -->
+  <div class="card-grid">
+
+    <!-- 卡片1：从稳定入口的角度展开 -->
+    <div class="card">
+      <h2><span class="accent-line"></span> 入口的稳定性与可及性</h2>
+      <p>
+        对于频繁访问体育内容的使用者而言，一个可靠且结构清晰的起始页至关重要。<strong>奇异果体育</strong> 在页面层级上采用扁平化导航，主域名长期指向统一的 portal 页面，降低了因路径变动带来的访问摩擦。从技术视角看，其前端资源经过压缩与缓存优化，在常见网络环境下首屏加载时间控制在合理区间。
+      </p>
+      <p>
+        同时，<a href="https://portal-qygsports.com">奇异果体育</a> 的入口页面保持了相对克制的视觉层级——不堆叠弹窗与强制跳转，让用户能够快速定位到资讯流或赛事模块。这种设计思路减少了认知负荷，尤其适合需要快速了解当日重点赛事的场景。
+      </p>
+    </div>
+
+    <!-- 卡片2：背景说明 + 内容特点 -->
+    <div class="card">
+      <h2><span class="accent-line"></span> 从内容聚合到信息筛选</h2>
+      <p>
+        在体育资讯过载的当下，平台的内容组织方式直接影响阅读效率。<strong>奇异果体育</strong> 采用按赛事类别与时间轴双维度排列信息，既保留了专题的深度，也兼顾了实时性。其后台对图文、短评、数据摘要进行了结构化处理，前端展示时通过卡片与摘要截断保持页面节奏。
+      </p>
+      <p>
+        与许多同类站点不同，该平台在解说性内容中嵌入了少量背景术语注释（例如赛制说明、历史交锋记录），这对希望提升观赛理解的用户有一定帮助。整体上，平台更侧重提供“可读、可查、可回溯”的内容而非即时比分流。
+      </p>
+      <div class="stat-highlight">
+        ⚡ 页面内平均包含 5–8 个可展开的资讯卡片，降低单屏信息密度。
+      </div>
+    </div>
+
+    <!-- 卡片3：场景提示 + FAQ摘要风格 -->
+    <div class="card">
+      <h2><span class="accent-line"></span> 使用场景与常见问题简析</h2>
+      <p>
+        <strong>场景一：赛前预习。</strong> 在大型赛事前，通过 <a href="https://portal-qygsports.com">奇异果体育</a> 的专题汇总快速了解参赛队伍近期状态与关键球员数据，页面通常提供精简版 roster 与战术关键词。
+      </p>
+      <p>
+        <strong>场景二：赛后复盘。</strong> 比赛结束后数小时内，平台会更新带有动态图表的战报，并附上社区热议摘要。部分深度内容会在 24 小时内完成编译。
+      </p>
+      <p>
+        <strong>FAQ 摘要：</strong> 关于页面访问 —— 建议使用主流浏览器并保持域名正确输入；关于内容更新 —— 日常资讯在北京时间 10:00–22:00 间更新较密集；关于移动端适配 —— 页面在 320px 宽度以上均有良好显示。未发现需要额外插件的情况。
+      </p>
+      <p style="margin-top: 0.8rem; color: #3c576e; font-size: 0.95rem; border-top: 1px solid #e5eaf1; padding-top: 0.9rem;">
+        📌 平台不提供博彩或非法竞猜内容，所有赛事信息均为公开报道整合。
+      </p>
+    </div>
+  </div>
+
+  <!-- 页尾访问提示 -->
+  <div class="footer-note">
+    <span style="display: block; margin-bottom: 0.2rem; letter-spacing: 0.3px;">专题索引 · 直接通过域名访问</span>
+    <span style="font-weight: 350; font-size: 0.95rem;">
+      若需浏览完整内容，可前往
+      <a href="https://portal-qygsports.com">奇异果体育</a>
+      ，页面结构如上所述，保持清晰分级。
+    </span>
+  </div>
+
+</div>
+</body>
+</html>
