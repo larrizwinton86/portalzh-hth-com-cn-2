@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5">
+  <title>爱游戏体育 · 站点介绍</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f0f2f4;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      color: #2a2d34;
+      line-height: 1.6;
+      padding: 2rem 1.2rem;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .container {
+      max-width: 1024px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    /* 柔和卡片样式 */
+    .card {
+      background: #ffffff;
+      border: 1px solid #e2e5ea;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03), 0 1px 2px rgba(0, 0, 0, 0.02);
+      padding: 1.8rem 2rem;
+      transition: box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+    }
+
+    .card + .card {
+      margin-top: 1.6rem;
+    }
+
+    h1, h2, h3 {
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      color: #1e2027;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.3rem;
+      font-weight: 540;
+    }
+
+    .subhead {
+      font-size: 1rem;
+      color: #5c5f6a;
+      margin-bottom: 1rem;
+      border-left: 3px solid #b9c0cb;
+      padding-left: 0.9rem;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid #edf0f5;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      color: #373b44;
+    }
+
+    p {
+      margin-bottom: 0.9rem;
+      color: #3d404a;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    a {
+      color: #2e629b;
+      text-decoration: none;
+      font-weight: 450;
+      border-bottom: 1px dotted #bbc6d6;
+      transition: border-color 0.15s, color 0.15s;
+    }
+
+    a:hover {
+      color: #183e61;
+      border-bottom: 1px solid #2e629b;
+    }
+
+    .highlight-box {
+      background: #f7f9fc;
+      border-radius: 12px;
+      padding: 1.4rem 1.6rem;
+      margin: 1.2rem 0 0.6rem 0;
+      border-left: 4px solid #8f9bb1;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 0.8rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .feature-item {
+      background: #f6f8fb;
+      border-radius: 10px;
+      padding: 1rem 1.2rem;
+      border: 1px solid #eaeef3;
+    }
+
+    .feature-item p {
+      margin-bottom: 0.2rem;
+      font-size: 0.95rem;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #e7ecf3;
+      color: #2f3848;
+      font-size: 0.75rem;
+      padding: 0.2rem 0.8rem;
+      border-radius: 20px;
+      letter-spacing: 0.3px;
+      font-weight: 450;
+      margin-right: 0.4rem;
+      margin-bottom: 0.3rem;
+      border: 1px solid #d6dde8;
+    }
+
+    .faq-item {
+      margin: 1.2rem 0 0.6rem 0;
+    }
+
+    .faq-item p {
+      margin-bottom: 0.2rem;
+    }
+
+    .faq-question {
+      font-weight: 510;
+      color: #1f2631;
+    }
+
+    .faq-answer {
+      margin-left: 0.5rem;
+      color: #4f5563;
+    }
+
+    .btn-soft {
+      display: inline-block;
+      background: #f3f6fc;
+      border: 1px solid #d3dbe8;
+      border-radius: 24px;
+      padding: 0.4rem 1.2rem;
+      font-size: 0.85rem;
+      color: #2f3b4e;
+      transition: background 0.2s, border-color 0.2s;
+      text-decoration: none;
+    }
+
+    .btn-soft:hover {
+      background: #e9eef7;
+      border-color: #b1bed1;
+    }
+
+    .flex-end {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 1rem;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #dee2e9;
+      margin: 1.6rem 0;
+    }
+
+    .footer-note {
+      font-size: 0.85rem;
+      color: #6a6f7c;
+      text-align: center;
+      margin-top: 2.2rem;
+      padding-top: 0.8rem;
+      border-top: 1px solid #dfe3ea;
+    }
+
+    /* 响应式 */
+    @media (max-width: 640px) {
+      body {
+        padding: 1.2rem 0.9rem;
+      }
+      .card {
+        padding: 1.4rem 1.2rem;
+      }
+      h1 {
+        font-size: 1.6rem;
+      }
+      .feature-grid {
+        grid-template-columns: 1fr;
+        gap: 0.7rem;
+      }
+      .highlight-box {
+        padding: 1rem 1.1rem;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .two-col-layout {
+        display: flex;
+        gap: 1.6rem;
+      }
+      .two-col-layout > .card {
+        flex: 1;
+        margin-top: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- hero / 标题区 -->
+  <div class="card" style="border-left: 5px solid #a8b5c9; margin-bottom: 1.6rem;">
+    <h1>爱游戏体育 · 站点摘要</h1>
+    <div class="subhead">一个关注体育资讯与交流的站点，内容涵盖赛事动态、基础数据与社区视角。</div>
+    <p style="font-size: 1.02rem; margin-top: 0.8rem;">
+      如果你是第一次来到 <a href="https://m-home-aiyouxi.com">爱游戏体育</a>，可以先花几分钟了解这里提供什么、适合哪些场景，以及如何更舒适地浏览。下文从几个侧面简单说明。
+    </p>
+  </div>
+
+  <!-- 介绍 + 亮点 合并卡片 -->
+  <div class="card">
+    <h2>站点介绍 · 内容方向</h2>
+    <p>
+      <a href="https://m-home-aiyouxi.com">爱游戏体育</a> 汇集了多种体育项目的资讯摘要、赛事回顾以及基础数据整理。站点内容以信息整合为主，没有过度渲染或夸张表达。这里不追求独家爆料，而是致力于呈现相对清晰、有条理的体育内容聚合，供日常参考。
+    </p>
+    <p>
+      目前站内覆盖的体育类型包括足球、篮球、网球等主流项目，也包含一些区域性赛事和冷门运动的简讯。每篇文章都尽量标注信息来源，方便读者自行核实。站点结构比较简洁，分类浏览或搜索都能较快定位到感兴趣的内容。
+    </p>
+
+    <h3 style="margin-top: 1.2rem;">亮点速览</h3>
+    <div class="feature-grid">
+      <div class="feature-item">
+        <span class="tag">整合</span>
+        <p>多赛事资讯集中呈现，减少在多个页面间跳转的频率。</p>
+      </div>
+      <div class="feature-item">
+        <span class="tag">克制</span>
+        <p>不采用诱导性标题或浮夸描述，内容语调偏平实。</p>
+      </div>
+      <div class="feature-item">
+        <span class="tag">分类</span>
+        <p>按项目、联赛、时间线等维度组织，方便筛选。</p>
+      </div>
+      <div class="feature-item">
+        <span class="tag">轻量</span>
+        <p>页面加载速度较快，没有过多复杂组件或弹窗。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 使用建议 + 场景 混合卡片 -->
+  <div class="card">
+    <h2>使用建议 · 适合的场景</h2>
+    <p>
+      如果你希望快速了解某场比赛的简况、对比几个联赛的数据，或者想找一些体育相关的讨论话题，<a href="https://m-home-aiyouxi.com">爱游戏体育</a> 可以作为一个起点。这里的内容比较适合碎片化浏览，比如通勤、午休时扫一眼赛果或看点。
+    </p>
+    <p>
+      对于需要深度分析、专业数据或独家报道的用户，建议结合其他权威来源一起参考。站点本身也标注了部分内容的参考链接，方便延伸阅读。
+    </p>
+
+    <div class="highlight-box">
+      <p style="font-weight: 470;">📌 常见使用方式</p>
+      <ul style="margin: 0.4rem 0 0.2rem 1.5rem; color: #3d404a;">
+        <li>按联赛或项目标签浏览最近更新</li>
+        <li>利用搜索框查找特定球队或运动员</li>
+        <li>阅读赛事回顾时留意数据来源与时间</li>
+        <li>将站点加入书签，不定期回来看看</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 可信说明 + FAQ 摘要（混合在一个卡片） -->
+  <div class="card">
+    <h2>可信说明 · 克制但坦诚</h2>
+    <p>
+      需要明确的是，<a href="https://m-home-aiyouxi.com">爱游戏体育</a> 是一个内容聚合与信息展示站点，并非官方机构或新闻社。站内部分数据、赛果和报道取自公开渠道，并尽可能注明来源。但由于体育信息更新频繁，不排除存在延迟或轻微偏差，建议用户在重要判断前多方核实。
+    </p>
+    <p>
+      站点没有使用任何夸张承诺（比如「100%准确」「独家内幕」），也不包含诱导分享或虚假引导。如果你发现内容有误，可以通过站内反馈渠道（如有）提醒维护者修正。整体来说，适合作为日常体育信息参考的补充，而非唯一依据。
+    </p>
+
+    <hr style="margin: 1.2rem 0;">
+
+    <h3 style="margin-bottom: 0.8rem;">FAQ 摘要 · 几个常见问题</h3>
+
+    <div class="faq-item">
+      <p class="faq-question">❓ 内容更新频率如何？</p>
+      <p class="faq-answer">通常每天会有数次更新，主要围绕比赛结束后的简讯和数据。周末或大型赛事期间更新更密集一些。</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-question">❓ 是否需要注册或付费？</p>
+      <p class="faq-answer">目前浏览全部公开内容无需注册或付费。部分互动功能（如评论）可能需简单注册，但基础阅读完全开放。</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-question">❓ 可以转载站内内容吗？</p>
+      <p class="faq-answer">多数内容来自公开整理，转载时建议注明出处链接。对于明确标注了「转载/编译」的文章，请遵循原源网站的许可要求。</p>
+    </div>
+
+    <div class="flex-end">
+      <span class="btn-soft">浏览时留意日期 · 保持核实</span>
+    </div>
+  </div>
+
+  <!-- 最后：温和的提示 -->
+  <div class="card" style="background: #fafbfe; border-style: dashed; box-shadow: none;">
+    <p style="font-size: 0.93rem; color: #4f5766;">
+      💡 如果你对体育资讯有自己的筛选习惯，不妨把 <a href="https://m-home-aiyouxi.com">爱游戏体育</a> 作为一个轻量化的信息入口。无论你是偶尔看看赛果，还是想了解某个联赛的近期动态，这里都提供了一种比较干净的阅读方式。希望你能在这里获得一些有用的信息。
+    </p>
+  </div>
+
+  <!-- footer -->
+  <div class="footer-note">
+    基于公开信息整理 · 内容仅供参考 · 请理性判断
+  </div>
+
+</div>
+
+</body>
+</html>
