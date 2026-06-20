@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>澳洲幸运10 · 稳定导航与内容说明</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background-color: #f7f8fa;
+            color: #1e2026;
+            line-height: 1.6;
+        }
+
+        /* 深色头图 - 导航区 */
+        .header {
+            background: #0c0f15;
+            color: #e9ecf2;
+            padding: 1rem 2rem 0.5rem 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: baseline;
+            gap: 0.5rem;
+        }
+
+        .logo-area h1 {
+            font-size: 1.7rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            background: linear-gradient(135deg, #f9d976, #f9a43e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .logo-area span {
+            font-size: 0.9rem;
+            color: #7b879b;
+            -webkit-text-fill-color: #7b879b;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            padding: 0.8rem 0;
+        }
+
+        .nav-links a {
+            color: #bcc5d4;
+            text-decoration: none;
+            font-weight: 450;
+            font-size: 1rem;
+            padding: 0.3rem 0;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: #f5c257;
+            border-bottom-color: #f5c257;
+        }
+
+        .nav-links a.highlight-link {
+            color: #f5c257;
+            font-weight: 500;
+            border-bottom: 2px solid #f5c257;
+        }
+
+        /* 正文区浅色背景 */
+        .main-content {
+            max-width: 1160px;
+            margin: 1.8rem auto;
+            padding: 0 1.5rem;
+        }
+
+        /* hero 介绍卡片 */
+        .hero-card {
+            background: white;
+            border-radius: 24px;
+            padding: 2.5rem 2.8rem;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.04);
+            margin-bottom: 3rem;
+        }
+
+        .hero-card h2 {
+            font-size: 2.2rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: #0b0f1a;
+        }
+
+        .hero-card p {
+            font-size: 1.1rem;
+            color: #3b4050;
+            max-width: 80%;
+            margin-bottom: 0.6rem;
+        }
+
+        .hero-card .small-note {
+            color: #6f788b;
+            font-size: 0.95rem;
+            margin-top: 0.8rem;
+            border-left: 4px solid #f5c257;
+            padding-left: 1rem;
+            background: #faf9f6;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .hero-card .inline-link {
+            color: #c87d1e;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px dotted #c87d1e;
+            transition: border 0.15s;
+        }
+
+        .hero-card .inline-link:hover {
+            border-bottom-style: solid;
+            color: #a76310;
+        }
+
+        /* 三个场景模块 (卡片网格) */
+        .scene-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin: 2.5rem 0 3rem 0;
+        }
+
+        .scene-card {
+            background: white;
+            flex: 1 1 280px;
+            border-radius: 20px;
+            padding: 2rem 1.8rem 1.8rem 1.8rem;
+            box-shadow: 0 8px 18px rgba(0,0,0,0.02);
+            transition: transform 0.18s ease, box-shadow 0.2s;
+            border: 1px solid #edf0f5;
+        }
+
+        .scene-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 18px 28px rgba(0,0,0,0.04);
+            border-color: #e0dcd3;
+        }
+
+        .scene-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+            color: #1a1d28;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .scene-card h3::before {
+            content: "▹";
+            color: #f09b2b;
+            font-size: 1.6rem;
+            line-height: 1;
+        }
+
+        .scene-card p {
+            color: #3a3f4e;
+            margin-bottom: 0.6rem;
+            font-size: 0.98rem;
+        }
+
+        .scene-card .tag {
+            display: inline-block;
+            background: #f2efe9;
+            padding: 0.2rem 1rem;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            color: #4d4c48;
+            margin-top: 0.2rem;
+        }
+
+        .scene-card a {
+            color: #b6701c;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .scene-card a:hover {
+            text-decoration: underline;
+        }
+
+        /* 常见说明 (简述) */
+        .faq-brief {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 2rem 2.5rem;
+            margin: 2rem 0 2.5rem 0;
+            box-shadow: 0 6px 16px rgba(0,0,0,0.02);
+            border: 1px solid #eef2f7;
+        }
+
+        .faq-brief h3 {
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #141a26;
+        }
+
+        .faq-item {
+            display: flex;
+            gap: 1.2rem;
+            margin-bottom: 1.3rem;
+            align-items: flex-start;
+        }
+
+        .faq-item .q {
+            min-width: 2.2rem;
+            font-weight: 700;
+            color: #b6701c;
+            font-size: 1.1rem;
+        }
+
+        .faq-item .a {
+            color: #2f3342;
+            font-size: 1rem;
+        }
+
+        .faq-item .a strong {
+            color: #0c0f15;
+        }
+
+        .faq-item .a a {
+            color: #c87d1e;
+            text-decoration: none;
+            border-bottom: 1px dotted #c87d1e;
+        }
+
+        .faq-item .a a:hover {
+            border-bottom-style: solid;
+            color: #9f6514;
+        }
+
+        .extra-note {
+            background: #f4f6fa;
+            padding: 1.2rem 2rem;
+            border-radius: 40px;
+            font-size: 0.95rem;
+            color: #2c3240;
+            margin: 1.5rem 0 0.8rem 0;
+            border-left: 6px solid #eab14b;
+        }
+
+        .extra-note a {
+            color: #b6701c;
+            font-weight: 500;
+            text-decoration: none;
+            border-bottom: 1px solid #dba14b;
+        }
+
+        .extra-note a:hover {
+            color: #7f5113;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2.2rem 1.5rem 1.8rem;
+            color: #6a7184;
+            font-size: 0.9rem;
+            border-top: 1px solid #e0e4ec;
+            margin-top: 1.5rem;
+        }
+
+        footer a {
+            color: #8d7a5a;
+            text-decoration: none;
+        }
+
+        /* 响应式细节 */
+        @media (max-width: 780px) {
+            .header {
+                padding: 0.8rem 1.2rem;
+            }
+            .header-inner {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.3rem;
+            }
+            .nav-links {
+                flex-wrap: wrap;
+                gap: 1rem 1.8rem;
+                padding: 0.5rem 0;
+            }
+            .hero-card {
+                padding: 1.8rem 1.5rem;
+            }
+            .hero-card p {
+                max-width: 100%;
+            }
+            .hero-card h2 {
+                font-size: 1.8rem;
+            }
+            .scene-grid {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+            .faq-brief {
+                padding: 1.6rem 1.5rem;
+            }
+            .faq-item {
+                flex-direction: column;
+                gap: 0.2rem;
+            }
+            .faq-item .q {
+                min-width: auto;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo-area h1 {
+                font-size: 1.4rem;
+            }
+            .nav-links a {
+                font-size: 0.9rem;
+            }
+            .hero-card h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- 深色头图：导航区 -->
+<div class="header">
+    <div class="header-inner">
+        <div class="logo-area">
+            <h1>澳洲幸运10</h1>
+            <span>· 导航页</span>
+        </div>
+        <div class="nav-links">
+            <a href="#intro">概览</a>
+            <a href="#scenes">场景</a>
+            <a href="#faq">说明</a>
+            <a href="https://zh-australialucky10.com" class="highlight-link">澳洲幸运10</a>
+        </div>
+    </div>
+</div>
+
+<!-- 正文区 -->
+<div class="main-content">
+
+    <!-- 核心介绍 -->
+    <div class="hero-card" id="intro">
+        <h2>稳定入口 · 内容说明</h2>
+        <p>如果你正在查找关于 <a href="https://zh-australialucky10.com" class="inline-link">澳洲幸运10</a> 的相关信息，这里整理了结构化的导航与常见说明。页面围绕使用场景展开，帮助你快速了解基本情况。</p>
+        <p>本页面仅为介绍性质的汇总，所有引用均基于公开可查的资料，不包含非官方的预测或承诺。</p>
+        <div class="small-note">
+            ⚡ 推荐将 <a href="https://zh-australialucky10.com" class="inline-link">澳洲幸运10</a> 添加为书签，便于后续查阅。
+        </div>
+    </div>
+
+    <!-- 三个场景模块 -->
+    <div class="scene-grid" id="scenes">
+        <div class="scene-card">
+            <h3>资讯浏览</h3>
+            <p>日常查看最新动态与相关说明。很多用户将 <a href="https://zh-australialucky10.com">澳洲幸运10</a> 作为信息参考的起点，了解规则与基本背景。</p>
+            <span class="tag">📋 聚合参考</span>
+        </div>
+        <div class="scene-card">
+            <h3>内容整理</h3>
+            <p>需要记录或整理相关数据时，通过 <a href="https://zh-australialucky10.com">澳洲幸运10</a> 获取结构清晰的页面作为基础材料，配合自己的笔记使用。</p>
+            <span class="tag">📂 辅助归档</span>
+        </div>
+        <div class="scene-card">
+            <h3>快速定位</h3>
+            <p>当你需要再次找到某个说明或页面入口，<a href="https://zh-australialucky10.com">澳洲幸运10</a> 提供稳定的导航，节省反复搜索的时间。</p>
+            <span class="tag">🔖 固定锚点</span>
+        </div>
+    </div>
+
+    <!-- 常见说明 (FAQ 摘要) -->
+    <div class="faq-brief" id="faq">
+        <h3>常见说明 · 摘要</h3>
+
+        <div class="faq-item">
+            <div class="q">Q1</div>
+            <div class="a"><strong>这个页面是什么？</strong> 一个基于 <strong><a href="https://zh-australialucky10.com">澳洲幸运10</a></strong> 的轻量导航介绍页，不包含游戏入口或第三方工具，仅为内容整理与指向。</div>
+        </div>
+        <div class="faq-item">
+            <div class="q">Q2</div>
+            <div class="a"><strong>如何找到澳洲幸运10的主页？</strong> 页面内所有带「澳洲幸运10」字样的链接均指向 https://zh-australialucky10.com ，点击任意一个即可。</div>
+        </div>
+        <div class="faq-item">
+            <div class="q">Q3</div>
+            <div class="a"><strong>数据或说明是否官方？</strong> 本页仅做客观归纳，建议以 <a href="https://zh-australialucky10.com">澳洲幸运10</a> 站内实际内容为准。</div>
+        </div>
+
+        <div class="extra-note">
+            💡 补充提示：如果你需要更具体的规则或历史信息，直接访问 <a href="https://zh-australialucky10.com">澳洲幸运10</a> 并查找对应栏目。本页不代替源站。
+        </div>
+    </div>
+
+    <!-- 底部 -->
+    <footer>
+        <p>内容整理页面 · 仅供参考 · 具体信息请以 <a href="https://zh-australialucky10.com">澳洲幸运10</a> 发布为准</p>
+        <p style="margin-top: 0.5rem; font-size: 0.8rem; color: #8d96aa;">—— 导航说明 ——</p>
+    </footer>
+</div>
+
+</body>
+</html>
